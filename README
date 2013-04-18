@@ -1,0 +1,41 @@
+Below are examples that show I implemented requirements 1-5. I didn't do any extra credit.
+
+1. The semicolon should now be a statement terminator and not a separator.  No termination is needed after "end".
+
+	$ python codegen.py mtfiles/factorial.mt
+	$ python mtfiles/factorial.pyc
+	Enter a number, will print factorial of it
+
+	$ python codegen.py mtfiles/isprime.mt
+	$ python mtfiles/isprime.pyc
+	Enter a number, will print 0 if prime, 1 otherwise
+
+2. You need to add proper precedence to the operators.
+
+	$ python codegen.py mtfiles/precedence.mt
+	$ python mtfiles/precedence.pyc
+	Correct answer is 7
+
+3. Add function definitions.  Functions can take multiple parameters and return a single value.
+4. Allow function calls in expressions.
+
+	$ python codegen.py mtfiles/function.mt
+	$ python mtfiles/function.pyc
+	Correct answer is 8
+
+5. Generate proper bytecode for these new features.
+	
+	if you want to see bytecode, you can uncomment print line in pop_stack
+
+	def pop_stack(self):
+        tos = self.code.pop()
+        # pprint.pprint(tos)
+        return tos
+
+6. Scoping
+
+	$ python codegen.py mtfiles/scope.mt
+	$ python mtfiles/scope.pyc
+	Enter a number
+	2
+	1
