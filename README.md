@@ -3,6 +3,14 @@ MiniTriangleCompiler
 
 Compile Mini Triangle, a simple programming language, files to python bytecode
 
+The flow of the program works like this:
+
+* mini triangle source code is fed to scanner.py
+* scanner.py spits out a list of tokens
+* parser.py verifies that the tokens are correct on a grammar level and spits out an ast tree
+* walk down the ast tree and build a list of python bytecode and write out to pyc file
+
+
 I've provided mini triangle files for testing purposes. You can find these files under testFiles directory.
 
 Run
